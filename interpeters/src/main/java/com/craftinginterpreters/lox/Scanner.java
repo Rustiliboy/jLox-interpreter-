@@ -157,7 +157,6 @@ class Scanner {
   private void identifier() {
     while (isAlphaNumeric(peek())) advance();
 
-    addToken(IDENTIFIER);
     String text = source.substring(start, current);
     TokenType type = keywords.get(text); // program language key word
     if (type == null) type = IDENTIFIER; // possible user difined var
