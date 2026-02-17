@@ -217,6 +217,15 @@ public class Interpreter implements Expr.Visitor<Object>,
     return null;
   }
 
+  @Override
+    public Void visitReturnStmt(Stmt.Return stmt) {
+      Object value = null;
+      if (stmt.value != null) value = evaluate(stmt.value);
+
+      throw new Return(value);
+    }
+
+
   private void checkNumberOperand(Token operator, Object operand) {
     if (operand instanceof Double) return;
     throw new RuntimeError(operator, "Operand must be a number.");
