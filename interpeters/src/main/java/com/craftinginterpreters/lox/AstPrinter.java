@@ -72,4 +72,19 @@ class AstPrinter implements Expr.Visitor<String> {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public String visitGetExpr(Expr.Get expr) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public String visitSetExpr(Expr.Set expr) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public String visitThisExpr(Expr.This expr) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }
