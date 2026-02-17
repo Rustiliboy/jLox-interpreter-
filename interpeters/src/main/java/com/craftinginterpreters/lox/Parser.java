@@ -61,7 +61,7 @@ class Parser {
 
 
   private Expr expression() {
-    return assignment                    ();
+    return assignment();
   }
   private Expr equality() {
     Expr expr = comparison();
@@ -158,7 +158,7 @@ class Parser {
   }
 
   private Expr assignment() {
-    Expr expr = equality();
+    Expr expr = or();
 
     if (match(EQUAL)) {
       Token equals = previous();
