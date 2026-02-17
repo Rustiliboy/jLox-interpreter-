@@ -9,6 +9,15 @@
       "projectName": "interpeters",
       "args": "${workspaceFolder}/testprogram.txt",
       "cwd": "${workspaceFolder}"
+    },
+        {
+      "type": "java",
+      "name": "Run Lox",
+      "request": "launch",
+      "mainClass": "com.craftinginterpreters.lox.Lox",
+      "projectName": "interpeters",
+      "cwd": "${workspaceFolder}"
     }
+
   ]
 }
