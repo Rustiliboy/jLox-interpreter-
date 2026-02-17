@@ -62,4 +62,9 @@ class AstPrinter implements Expr.Visitor<String> {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public String visitLogicalExpr(Expr.Logical expr) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }
